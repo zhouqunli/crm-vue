@@ -57,7 +57,11 @@
     </el-aside>
     <el-container>
       <el-header>企业管理系统</el-header>
-      <el-main>Main</el-main>
+      <el-main>
+        <div class="main-body">
+
+        </div>
+      </el-main>
     </el-container>
   </el-container>
 </div>
@@ -111,6 +115,10 @@ export default {
   background-color: #E9EEF3;
   color: #444;
   text-align: center;
+  padding: 0;
+  /*左右滚动条*/
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 .el-container {
   height: 100%;
@@ -122,6 +130,11 @@ export default {
 .el-menu-vertical-demo:not(.el-menu--collapse) {
   width: 200px;
   min-height: 400px;
+}
+.main-body{
+  background-color: white;
+  height: 100%;
+  margin: 10px 0px 0px 10px;
 }
 
 </style>
