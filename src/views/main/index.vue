@@ -10,7 +10,6 @@
     </div>
       <!--导航栏el-menu：大导航  default-active：默认高亮的内容（现在为索引4）
       一般情况下默认是el-menu-item中的index取值-->
-
       <el-scrollbar class="scrollbar">
       <el-menu
           default-active="4"
@@ -59,82 +58,22 @@
       <el-header>企业管理系统</el-header>
       <el-main>
         <div class="main-body">
-
+        <!--可变区域-->
+          <router-view/>
         </div>
       </el-main>
     </el-container>
   </el-container>
 </div>
 </template>
+<!--<script src="./index.js"></script>-->
 <script>
-export default {
-  name: "index",
-  /*data() {
-    return {
-      isCollapse: false
-    };
-  },*/
-}
+import obj from "@/views/main/index";
+export default obj;
 </script>
 
-<style scoped lang="less">
-.main-box{
-  height: 100%;
-}
-.scrollbar{
-  height: calc(100% - 70px);
-  width: 102%;
-  overflow-x: hidden;
-}
-.el-scrollbar_thumb{
-  display: none!important;
-}
-.el-header{
-  background-color: #F56C6C;
-  color: #fff;
-  text-align: center;
-  line-height: 60px;
-}
-
-.el-aside {
-  background-color: #fff;
-  color: #444;
-  text-align: center;
-}
-.title-wrapper{
-  line-height: 60px;
-  background-color: #F56C6C;
-}
-.title-wrapper span{
-  font-weight: 700;
-  color: white;
-  font-size: 18px;
-  /*font-family: "华文宋体";*/
-}
-.el-main {
-  background-color: #E9EEF3;
-  color: #444;
-  text-align: center;
-  padding: 0;
-  /*左右滚动条*/
-  overflow-y: hidden;
-  overflow-x: hidden;
-}
-.el-container {
-  height: 100%;
-}
-
-.el-container:nth-child(7) .el-aside {
-  line-height: 320px;
-}
-.el-menu-vertical-demo:not(.el-menu--collapse) {
-  width: 200px;
-  min-height: 400px;
-}
-.main-body{
-  background-color: white;
-  height: 100%;
-  margin: 10px 0px 0px 10px;
-}
-
-</style>
+<style lang="less" src="./index.less"></style>
+<!--
+<style lang="less">
+@import "./index";
+</style>-->

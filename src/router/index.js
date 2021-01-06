@@ -23,7 +23,23 @@ const routes = [
   {
     path: '/main',
     name: 'mian',
-    component: () => import( '../views/main/index.vue')
+    component: () => import( '../views/main/index.vue'),
+    /*显示在了main里面，的一个路由部分*/
+    children:[
+        {
+          /*带/表示从跟路径下访问，可以直接http://localhost:8081/index
+          * 如果不带/则表示拼接maim http://localhost:8081/main/index*/
+      path:'index',
+          name:'index',
+          component: () => import( '../views/index/index.vue'),
+    },
+      {
+
+        path:'supplier',
+        name:'supplier',
+        component: () => import( '../views/supplier/index.vue'),
+      },
+    ]
   },
 ]
 
